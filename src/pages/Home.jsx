@@ -1,55 +1,40 @@
 import React from 'react'
 import banner from '../assets/banner.png'
 import about_banner from "../assets/about_banner.png"
+import Kozhikode from './Kozhikode';
+import Kalppeta from './Kalppeta';
+import Mkm from './Mkm';
+import Tham from './Tham';
+import About from '../componets/About';
+import { Link } from 'react-router-dom';
+import Contact from '../componets/Contact';
 function Home() {
+
+  const text_style = {
+    fontFamily: "Merriweather",
+    fontOpticalSizing: "auto",
+  };
   return (
     <>
-    <div className='bg-gray-50'>
-      
- {/* Hero Banner */}
-      <div className="w-full">
-        <img
-          src={banner}
-          alt="CT Associates Banner"
-          className="w-full h-auto md:h-[70vh] md:object-cover"
-        />
-      </div>
+      <div className='bg-gray-50 scroll-mt-20' id='Home'>
 
-      {/* About Section */}
-      <div className="w-full flex flex-col md:flex-row items-center gap-8 px-6 md:px-12 py-12">
-
-        {/* Image */}
-        <div className="w-full md:w-1/2">
-          {/* <img
-            src={}
-            alt="CT Associates"
-            className="w-full rounded-lg"
-          /> */}
+        {/* Hero Banner */}
+        <div className="w-full">
+          <img
+            src={banner}
+            alt="CT Associates Banner"
+            className="w-full h-auto md:h-[70vh] md:object-cover"
+          />
         </div>
 
-        {/* Text */}
-        <div className="w-full md:w-1/2 text-black">
-          <p className="text-justify leading-7">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Dolore dicta necessitatibus voluptatibus earum, quas molestias
-            consequuntur ipsam rem numquam, modi itaque quis.
+        <About />
+        
+<Contact/>
 
-            Qui voluptatum numquam delectus, repudiandae provident aliquam
-            ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Optio quidem excepturi, at porro molestiae soluta nobis a
-            repellendus molestias eum error magnam id tempora officiis.
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eius laboriosam placeat quia exercitationem nobis laborum natus
-            doloremque, labore eveniet optio officia libero.
-          </p>
-        </div>
-
+          
       </div>
 
 
-    </div>
-     
     </>
   )
 }
